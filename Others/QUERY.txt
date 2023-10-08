@@ -1,0 +1,10 @@
+select DISTINCT TOP 1
+ (productId),
+	ISNULL(
+(select COUNT(productId)
+	from  [dbo].[log] 
+	where productId = loger.productId and submitDate  >= DATEADD(month, -1, GETDATE())
+	group by productId )
+,0) countOfSell
+from [dbo].[log] loger
+ORDER BY countOfSell DESC
