@@ -10,3 +10,15 @@ C:\Users\User\source\repos\MyShop\Domain\obj\Debug\net5.0\Domain.csproj.CoreComp
 C:\Users\User\source\repos\MyShop\Domain\obj\Debug\net5.0\Domain.dll
 C:\Users\User\source\repos\MyShop\Domain\obj\Debug\net5.0\ref\Domain.dll
 C:\Users\User\source\repos\MyShop\Domain\obj\Debug\net5.0\Domain.pdb
+D:\programing\coding\Hasin\Domain\bin\Debug\net5.0\Domain.deps.json
+D:\programing\coding\Hasin\Domain\bin\Debug\net5.0\Domain.dll
+D:\programing\coding\Hasin\Domain\bin\Debug\net5.0\Domain.pdb
+D:\programing\coding\Hasin\Domain\obj\Debug\net5.0\Domain.csproj.AssemblyReference.cache
+D:\programing\coding\Hasin\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\programing\coding\Hasin\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+D:\programing\coding\Hasin\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+D:\programing\coding\Hasin\Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+D:\programing\coding\Hasin\Domain\obj\Debug\net5.0\Domain.dll
+D:\programing\coding\Hasin\Domain\obj\Debug\net5.0\refint\Domain.dll
+D:\programing\coding\Hasin\Domain\obj\Debug\net5.0\Domain.pdb
+D:\programing\coding\Hasin\Domain\obj\Debug\net5.0\ref\Domain.dll

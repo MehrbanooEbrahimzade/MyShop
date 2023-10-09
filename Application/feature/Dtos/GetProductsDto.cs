@@ -14,16 +14,29 @@ namespace Application.Dtos
         [JsonPropertyName(name: "title_en")]
         public string EnName { get;  set; }
 
+        [JsonPropertyName(name: "url")]
+        public UrlInfo UrlInfo { get; set; }
+
         [JsonPropertyName(name: "default_variant")]
-        public DefaultVariant DefaultVariant { get; set; } = new DefaultVariant();
+        public DefaultVariant? DefaultVariant { get; set; } 
+
     }
+    public class UrlInfo
+    {
+        [JsonPropertyName(name: "uri")]
+        public string Uri { get; set; }
+
+        //[JsonPropertyName(name: "seller")]
+        //public SellerDto Seller { get; set; }
+    }
+
     public class DefaultVariant
     {
         [JsonPropertyName(name: "price")]
         public PriceDto Price { get; set; }
 
-        [JsonPropertyName(name: "seller")]
-        public SellerDto Seller { get; set; }
+        //[JsonPropertyName(name: "seller")]
+        //public SellerDto Seller { get; set; }
     }
 
     public class SellerDto

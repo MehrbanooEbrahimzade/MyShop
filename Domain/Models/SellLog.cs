@@ -5,7 +5,7 @@ namespace Domain.Models
     {
         public SellLog(int productId, int userId)
         {
-            ProductId = productId;
+            //ProductId = productId;
             UserId = userId;
             SubmitDate = DateTime.UtcNow;
         }

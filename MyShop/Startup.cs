@@ -15,6 +15,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Domain.Models;
+using Microsoft.AspNetCore.OData;
+using Microsoft.OData.Edm;
+using Microsoft.OData.ModelBuilder;
+using Application.IServices;
 
 namespace MyShop
 {
@@ -30,15 +35,19 @@ namespace MyShop
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MyShop", Version = "v1" });
             });
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             services.AddScoped<IProductRepository, ProductRepository>(); 
-            services.AddSingleton<ApiStarter>();
-            services.AddHostedService(x => x.GetRequiredService<ApiStarter>());
+            services.AddScoped<IProductService, ProductService>(); 
+            //services.AddSingleton<ApiStarter>();
+            //services.AddHostedService(x => x.GetRequiredService<ApiStarter>());
             services.AddSingleton<Database>(); // just for mvp sample
         }
 
@@ -63,5 +72,6 @@ namespace MyShop
                 endpoints.MapControllers();
             });
         }
+
     }
 }

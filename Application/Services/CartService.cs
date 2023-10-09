@@ -2,7 +2,6 @@
 using Application.Feture.Command;
 using Application.IServices;
 using Domain.IRepository;
-using Domain.Models;
 using System;
 using System.Threading.Tasks;
 
@@ -28,7 +27,7 @@ namespace Application.Services
                 return await _cartRepository.CreateCartByUserId(command.UserId);
             else
             {
-                return await _cartRepository.CheckInventoryOfProducts(command.UserId);
+                //return await _cartRepository.CheckInventoryOfProducts(command.UserId);
             }
             return cart.Id;
         }

@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace Application.Services
 {
-    public class ApiStarter : IHostedService
-    {
+    //public class ApiStarter : IHostedService
+    //{
         //    private readonly ISchedulerFactory _schedulerFactory;
         //    private IScheduler _scheduler;
 
@@ -51,6 +51,6 @@ namespace Application.Services
     //}
 
 
-}
+//}
 
 }

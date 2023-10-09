@@ -1,10 +1,6 @@
-﻿using Application.Dtos;
-using Microsoft.AspNetCore.Mvc;
-using RestSharp;
-using System;
-using System.Net;
-using System.Text.Json;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Application.IServices;
 
 namespace MyShop.Controllers
 {
@@ -19,15 +15,13 @@ namespace MyShop.Controllers
             _productService = productService;
         }
 
-        [HttpPost("Products")]
+        [HttpGet]
         public async Task<IActionResult> GetAllProducts()
         {
-            _productService.GetProducts();
-            //convert to model
-            return Ok();//(models);
+            return Ok( await _productService.GetProducts());
         }
 
-        [HttpPost("GetProduct/{id}")]
+        [HttpPost("{id}")]
         public async Task<IActionResult> GetProduct(int id)
         {
             //if (!command.Validate())//fluentvalidation
