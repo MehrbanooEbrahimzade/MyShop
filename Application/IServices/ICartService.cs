@@ -7,6 +7,9 @@ namespace Application.IServices
     public interface ICartService
     {
         public Task<int> AddCartAsync(AddCartCommand command);
-        public Task AddItemToCartAsync(AddItemToCartCommand command);
+        public Task AddProductToCartAsync(AddProductToCartCommand command);
+        public Task RemoveProductFromCartAsync(RemoveProductFromCartCommand command);
+        public Task<bool> ConfirmCart(int cartId);
+        public Task<bool> PayCart(int userId);
     }
 }

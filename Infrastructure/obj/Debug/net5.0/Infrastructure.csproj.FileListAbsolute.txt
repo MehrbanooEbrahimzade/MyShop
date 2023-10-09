@@ -14,9 +14,13 @@ C:\Users\User\source\repos\MyShop\Infrastructure\bin\Debug\net5.0\Domain.dll
 C:\Users\User\source\repos\MyShop\Infrastructure\bin\Debug\net5.0\Domain.pdb
 C:\Users\User\source\repos\MyShop\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
 D:\programing\coding\Hasin\Infrastructure\bin\Debug\net5.0\Infrastructure.deps.json
+D:\programing\coding\Hasin\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.json
+D:\programing\coding\Hasin\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.dev.json
 D:\programing\coding\Hasin\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
 D:\programing\coding\Hasin\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
+D:\programing\coding\Hasin\Infrastructure\bin\Debug\net5.0\Application.dll
 D:\programing\coding\Hasin\Infrastructure\bin\Debug\net5.0\Domain.dll
+D:\programing\coding\Hasin\Infrastructure\bin\Debug\net5.0\Application.pdb
 D:\programing\coding\Hasin\Infrastructure\bin\Debug\net5.0\Domain.pdb
 D:\programing\coding\Hasin\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.AssemblyReference.cache
 D:\programing\coding\Hasin\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
@@ -27,4 +31,5 @@ D:\programing\coding\Hasin\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj
 D:\programing\coding\Hasin\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
 D:\programing\coding\Hasin\Infrastructure\obj\Debug\net5.0\refint\Infrastructure.dll
 D:\programing\coding\Hasin\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
+D:\programing\coding\Hasin\Infrastructure\obj\Debug\net5.0\Infrastructure.genruntimeconfig.cache
 D:\programing\coding\Hasin\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll

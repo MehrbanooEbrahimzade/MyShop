@@ -4,22 +4,13 @@ using Infrastructure.DataContext;
 using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Domain.Models;
-using Microsoft.AspNetCore.OData;
-using Microsoft.OData.Edm;
-using Microsoft.OData.ModelBuilder;
 using Application.IServices;
+using Infrastructure;
 
 namespace MyShop
 {
@@ -45,10 +36,12 @@ namespace MyShop
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddScoped<IProductRepository, ProductRepository>(); 
-            services.AddScoped<IProductService, ProductService>(); 
-            //services.AddSingleton<ApiStarter>();
-            //services.AddHostedService(x => x.GetRequiredService<ApiStarter>());
-            services.AddSingleton<Database>(); // just for mvp sample
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<ICartRepository, CartRepository>();
+            services.AddScoped<ICartService, CartService>();
+            services.AddScoped<ISellLogRepository, SellLogRepository>();
+            services.ConfigureInfrastructure(Configuration);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

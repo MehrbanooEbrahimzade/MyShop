@@ -1,22 +1,39 @@
 ﻿using Domain.IRepository;
 using Domain.Models;
-using Infrastructure.DataContext;
-using System.Collections.Generic;
+using Newtonsoft.Json;
+using System;
+using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+using Application.Dtos;
+using AutoMapper;
+using RestSharp;
 
 namespace Infrastructure.Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        private readonly Database _database;
-        public ProductRepository(Database database)
+        private readonly IMapper _mapper;
+
+        public ProductRepository(IMapper mapper)
         {
-            _database = database;
+            _mapper = mapper;
         }
 
-        Task IProductRepository.UpdateAll(List<Product> products)
+        public async Task<Product> GetProductById(int productId)
         {
-            throw new System.NotImplementedException();
+            var url = "https://api.digikala.com/v1/search/?q=keyword&page=1";
+            var client = new RestClient(url);
+            var request = new RestRequest();
+            var response = await client.GetAsync(request);
+            //متوجه نشدم چطور باید از کوئری خود url استفاده کنم
+            //توی پروداکت هم ادرس داره ولی 404 میداد
+            if (response.StatusCode != HttpStatusCode.OK)
+                throw new Exception($"Get data from the external client {url} doesn't work!");
+
+            var data = JsonConvert.DeserializeObject<GetDataDto>(response.Content);
+            var productDto = data.Data.GetProductsDto.SingleOrDefault(x => x.Id == productId);
+           return _mapper.Map<Product>(productDto);
         }
     }
 }

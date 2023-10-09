@@ -1,8 +1,8 @@
 ﻿namespace Application.Feture.Command
 {
-    public class AddItemToCartCommand
+    public class AddProductToCartCommand
     {
-        public int ItemId{ get; set; }
+        public int ProductId{ get; set; }
         public int CartId{ get; set; }
     }
 }

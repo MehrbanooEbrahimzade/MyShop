@@ -8,14 +8,14 @@ namespace Domain.Enums
 {
     public enum ProductStatusType
     {
-        Available,
-        Unavailable
+        OutOfStock,
+        Marketable,
+        //...
     }
     public enum CartStatusType
     {
         Pending,
-        Fulfilled,
-        Sending,
-        finished,
+        Paid,
+        Fulfilled
     }
 }

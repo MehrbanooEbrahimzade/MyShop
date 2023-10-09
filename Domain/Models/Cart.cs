@@ -1,4 +1,5 @@
-﻿using Domain.Enums;
+﻿using System;
+using Domain.Enums;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,35 +11,39 @@ namespace Domain.Models
         {
             UserId = userId;
             Status = CartStatusType.Pending;
-            Items = new List<CartItem>();
         }
+
         public int Id { get; private set; }
-        public List<CartItem> Items { get; private set; }
-        public int UserId { get; private set; } //depends on our business
+        public List<Product> Products { get; private set; } = new List<Product>();
+        public int UserId { get; private set; }
         public decimal TotalPrice { get; private set; }
         public CartStatusType Status { get; private set; }
 
-        public void CalcTotalPrice()
+        public void ChangeStatus(CartStatusType status)
         {
-            decimal price = 0;
-            Items.ForEach(x => price += x.TotalPrice);
-            TotalPrice = price;
+            Status = status;
+        }
+        public void AddProduct(Product product)
+        {
+            var exist = Products.Any(x => x.Id == product.Id);
+            if (exist)
+                throw new Exception("The product already added to your cart!");
+
+            Products.Add(product);
+
+            TotalPrice += product.Price;
         }
 
-        public void AddItem(CartItem cartItem)
+        public void RemoveProduct(int productId)
         {
-            var item = Items.Find(x => x.Id == cartItem.Id);
-            if (item is not null)
-            {
-                item.AddItemCount();
-            }
-            else
-            {
-                Items.Add(cartItem);
-            }
-            CalcTotalPrice();
-        }
+            var product = Products.SingleOrDefault(x => x.Id == productId);
 
-        //and removeItem
+            if (product is null)
+                throw new NullReferenceException("The product not found in your cart!");
+
+            Products.Remove(product);
+
+            TotalPrice -= product.Price;
+        }
     }
 }

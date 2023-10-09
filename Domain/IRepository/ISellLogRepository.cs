@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.DataContext
+namespace Domain.IRepository
 {
-    public class Database
+    public interface ISellLogRepository
     {
-        public List<Product> products = new List<Product>();
+        public void CreateLog(SellLog sellLog);
     }
 }

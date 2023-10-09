@@ -8,5 +8,6 @@ namespace Application.IServices
     public interface IProductService
     {
         public Task<IEnumerable<Product>> GetProducts();
+        public Task<IEnumerable<Product>> GetProductsByName(string name);
     }
 }

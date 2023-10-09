@@ -21,19 +21,11 @@ namespace MyShop.Controllers
             return Ok( await _productService.GetProducts());
         }
 
-        [HttpPost("{id}")]
-        public async Task<IActionResult> GetProduct(int id)
+        [HttpGet("{filter}")]
+        public async Task<IActionResult> GetProduct([FromRoute]string filter)
         {
-            //if (!command.Validate())//fluentvalidation
-            //{
-            //    return BadRequest("WrongCartInformation");
-            //}
-
-            //request to get
-            return Ok();
+            return Ok(await _productService.GetProductsByName(filter));
         }
-        //and get by Url
-
 
     }
 }

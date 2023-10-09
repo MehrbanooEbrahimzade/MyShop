@@ -1,8 +1,4 @@
 ﻿using Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Domain.IRepository
@@ -11,7 +7,9 @@ namespace Domain.IRepository
     {
         public Task<Cart> GetCartById(int cartId);
         public Task<Cart> GetCartByUserId(int userId);
-        public Task<int> CreateCartByUserId(int userId);
-        public Task<int> AddItemToCart(Cart cart,CartItem Item);
+        public int CreateCart(Cart cart);
+        public Task AddProductToCart(int cartId, Product product);
+        public Task RemoveProductFromCart(int cartId, int productId);
+        public Task SaveAsync();
     }
 }

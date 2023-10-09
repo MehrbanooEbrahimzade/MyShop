@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JbwrOJNZbQUScwbVqHfjvdzsosoNEvDsOHnzzs2DtRNiM4UJbfiJplmIHB/6CKhgHRQvs4bKUlcpN/56uUhIrQ==",
+  "dgSpecHash": "AGvowf19suawIaBa83OtBb1ZuC+hriYCJ+PWKQf9I0OmoXhHhKqoyHBPLItdyrWXw5PKgyuPtUF/NMo22SZuLw==",
   "success": true,
   "projectFilePath": "D:\\programing\\coding\\Hasin\\Application\\Application.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\^Legion^\\.nuget\\packages\\microsoft.odata.modelbuilder\\1.0.9\\microsoft.odata.modelbuilder.1.0.9.nupkg.sha512",
     "C:\\Users\\^Legion^\\.nuget\\packages\\microsoft.spatial\\7.16.0\\microsoft.spatial.7.16.0.nupkg.sha512",
     "C:\\Users\\^Legion^\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\^Legion^\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\^Legion^\\.nuget\\packages\\quartz\\3.7.0\\quartz.3.7.0.nupkg.sha512",
     "C:\\Users\\^Legion^\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
     "C:\\Users\\^Legion^\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
