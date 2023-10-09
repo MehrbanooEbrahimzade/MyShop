@@ -1,10 +1,11 @@
-select DISTINCT TOP 1
- (productId),
-	ISNULL(
-(select COUNT(productId)
+select *
+from 
+	(select
+		productId,
+        ROW_NUMBER() OVER (
+            ORDER BY COUNT(productId) desc
+        ) rate
 	from  [dbo].[log] 
-	where productId = loger.productId and submitDate  >= DATEADD(month, -1, GETDATE())
-	group by productId )
-,0) countOfSell
-from [dbo].[log] loger
-ORDER BY countOfSell DESC
+	where submitDate  >= DATEADD(month, -1, GETDATE())
+	group by productId ) t
+where rate = 2
